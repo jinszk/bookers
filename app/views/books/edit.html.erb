@@ -6,4 +6,4 @@
     <%= f.text_area :body %>
     <%= f.submit '保存' %>
 <% end %>
-<%= link_to "詳細", book_path(@book.id), class: "show_#{id}" %><p>|</p><%= link_to "戻る", books_path, class: "back" %>
+<%= link_to "詳細", book_path(@book.id), class: "show_#{@book.id}" %><p>|</p><%= link_to "戻る", books_path, class: "back" %>

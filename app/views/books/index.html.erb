@@ -11,16 +11,16 @@
       <th>Title</th>
       <th>Body</th>
     </tr>
-  </thead>>
+  </thead>
 
   <tbody>
     <% @books.each do |book| %>
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
-        <td><%= link_to "詳細" , book_path(@book.id), class: "show_#{id}" %></td>
-        <td><%= link_to "編集" , edit_book_path(@book.id), class: "edit_#{id}" %></td>
-        <td><%= link_to "削除", book_path(@book.id), class: "destroy_#{id}", method: :delete %></td>
+        <td><%= link_to "詳細" , book_path(book.id), class: "show_#{book.id}" %></td>
+        <td><%= link_to "編集" , edit_book_path(book.id), class: "edit_#{book.id}" %></td>
+        <td><%= link_to "削除", book_path(book.id), class: "destroy_#{book.id}", method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
